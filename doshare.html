@@ -1,0 +1,26 @@
+<head>
+  <title>doshare</title>
+  <style>
+    textarea {
+      width: 100%;
+      padding: 0;
+      white-space: normal;
+    }
+  </style>
+</head>
+
+<body>
+  {{> main}}
+</body>
+
+<template name="main">
+    {{#each contents}}
+    {{> content}}
+    {{/each}}
+</template>
+
+<template name="content">
+  <textarea name="content" id="content" cols="30" rows="30">
+    {{text}}
+  </textarea>
+</template>
